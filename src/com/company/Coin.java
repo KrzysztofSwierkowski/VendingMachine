@@ -6,17 +6,11 @@ public class Coin {
 
 
     private boolean coinVal = false;
-    private double cost;
     private boolean isAbortet = true;
 
-    public void setCost(double cost) {
-        this.cost = cost;
+    public void setCost() {
     }
 
-
-    public boolean isCoinVal() {
-        return coinVal;
-    }
 
     public boolean coinVer (double cost){
         Scanner scanner = new Scanner(System.in);
@@ -35,7 +29,7 @@ public class Coin {
                 System.out.printf("Czy anulować? TAK/NIE %n");
                 scanner.nextLine();
                 String buttonClicked = scanner.nextLine();
-                isAbortet = Abort(buttonClicked);
+                if (buttonClicked.equals("TAK")){ isAbortet = Abort(buttonClicked);}
                 System.out.printf("Włóż gotówkę %n ");
 
                 double addCoin = scanner.nextDouble();
@@ -66,14 +60,8 @@ public class Coin {
     }
 
 public boolean Abort(String buttonClicked){
-        if (buttonClicked.equals("TAK")){
-            //a function that returns a all coin
-            return true;
-        }
-
-
-
-      return false;
+    //a function that returns a all coin
+    return buttonClicked.equals("TAK");
 }
 
 

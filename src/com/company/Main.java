@@ -11,12 +11,12 @@ public class Main {
         double productCost = enterNumber.products(product);
 
         Coin coin = new Coin();
-        coin.setCost(productCost);
+        coin.setCost();
         System.out.println(productCost);
         boolean isPaid = coin.coinVer(productCost);
-        String nameProduct = enterNumber.getProduct();
+
         GetProduct getProduct = new GetProduct();
-        getProduct.setNameProduct(nameProduct);
+        getProduct.setNameProduct(product);
         getProduct.setPaid(isPaid);
         getProduct.giveProduct();
 
