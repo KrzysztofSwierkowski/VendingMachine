@@ -7,7 +7,7 @@ public class GetProduct {
     private String nameProduct;
 
     public void setPaid(boolean paid) {
-        isPaid = paid;
+        this.isPaid = paid;
     }
 
     public void setNameProduct(String nameProduct) {
